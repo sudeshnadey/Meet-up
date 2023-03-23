@@ -7,8 +7,7 @@ import { Menu as MenuIcon, Language as LanguageIcon } from '@material-ui/icons';
 import { TextField, InputAdornment, Button } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
 import icon1 from './images/icon1.svg';
-import apple from './images/apple.jpg';
-import google from './images/google.jpg';
+
 import Polygon from './images/Polygon1.svg';
 import { useStyles } from "./styles";
 import image2 from './images/mea1.png';

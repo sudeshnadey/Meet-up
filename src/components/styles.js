@@ -55,24 +55,7 @@ color: '#000000',
   backgroundColor: '#041533',
  },
 
- head1: {
-  marginTop: '50px',
-  marginLeft: '20px',
-  fontFamily: 'sans-serif' ,
- fontStyle: 'normal',
- fontWeight: '600',
- fontSize: '34px',
- lineHeight: '40px',
- },
- head2: {
-  marginTop: '20px',
-  marginLeft: '20px',
-  fontFamily: 'Roboto' ,
- fontStyle: 'normal',
- fontSize: '16px',
- lineHeight: '25px',
- width: '300px',
- },
+ 
  div1: {
   marginLeft: '100px',
   marginTop: '10px',
@@ -111,55 +94,7 @@ fontSize: '12px',
 lineHeight: '16px',
 color:'#000000',
 },
- button1:{
-fontFamily: 'sans-serif',
-fontStyle: 'normal',
-fontWeight: '500',
-fontSize: '12px',
-lineHeight: '18px',
-color:'#A1A1A1',
-  backgroundColor: 'white',
-  marginLeft:'10px',
-  marginTop:'20px',
-  textTransform: 'none',
-  boxSizing: 'border-box',
-  border: '1px solid #E8E8E8',
-borderRadius:'6px',
-boxShadow: 'none',
-  '& img': {
-    width: '20px', // specify the width of the image
-  },
-  '&:hover': {
-    backgroundColor: 'white', // specify the hover color
-    boxShadow: 'none',
-  },
 
-  
- },
- button2:{
-  fontFamily: 'sans-serif',
-fontStyle: 'normal',
-fontWeight: '500',
-fontSize: '12px',
-lineHeight: '18px',
-color:'#A1A1A1',
-  backgroundColor: 'white',
-  marginTop:'20px',
-  textTransform: 'none',
-  boxSizing: 'border-box',
-  border: '1px solid #E8E8E8',
-borderRadius:'6px',
-boxShadow: 'none',
-  '& img': {
-    width: '20px', // specify the width of the image
-  },
-  '&:hover': {
-    backgroundColor: 'white', // specify the hover color
-    boxShadow: 'none',
-  },
-
-  
- },
  gap1:{
 marginLeft:'50px',
  },
@@ -236,18 +171,7 @@ icon1:{
 
 
  },
- card2: {
-  height: '600px',
-  borderRadius: '0px 30px 30px 0px',
- },
- img1:{
- marginLeft:'50px',
-  marginTop:'50px',
-},
-logo1:{
-  marginLeft:'10px',
-  marginTop:'10px',
-},
+
 type1:{
 marginTop:'10px',
 fontStyle: 'normal',
