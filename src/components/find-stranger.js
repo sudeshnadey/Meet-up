@@ -214,7 +214,7 @@ const SideNavbar = () => {
         </List>
       </Drawer>
     
-      <Card style={{ display: 'flex' ,backgroundColor:'#F5F8FE',marginTop:'30px',width:'88%',height:'530px', marginLeft: '30px', border:'1px solid transparent', borderRadius:'12px',}}>
+      <Card style={{ display: 'flex' ,backgroundColor:'#F5F8FE',marginTop:'30px',width:'85%',height:'530px', marginLeft: '40px', border:'1px solid transparent', borderRadius:'12px',}}>
         <Grid item xs={6} >
         <div className={classes.div1}>
           <Typography className={classes.heading1}  variant="h4" gutterBottom>
