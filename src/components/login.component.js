@@ -1,11 +1,7 @@
 import React, { useState }  from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import {  Box, Card, Typography, Toolbar, AppBar, IconButton, MenuItem, Menu } from '@material-ui/core';
+import {Typography, Toolbar,MenuItem, Menu } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import { Menu as MenuIcon, Language as LanguageIcon } from '@material-ui/icons';
-
-import { TextField, InputAdornment, Button } from "@material-ui/core";
-import { Visibility, VisibilityOff } from "@material-ui/icons";
+import { TextField,Button } from "@material-ui/core";
 import icon1 from './images/icon1.svg';
 import Polygon from './images/Polygon1.svg';
 import { useStyles } from "./styles";
@@ -29,100 +25,86 @@ const TwoColumnLayout = () => {
     setAnchorEl(null);
     setSelectedOption(event.target.innerText);
   };
-  return (
-   <div>
-      <Grid container spacing={0} >
-        <Grid item xs={6}  >
-     <Toolbar>
-            <Typography variant="h6" className={classes.logo}>
-            m. eet
-              </Typography>
-              <Typography variant="h6" className={classes.nav1}>
-                About
-              </Typography>
-              <Button
-                className={classes.dropdown1}
-                aria-controls="simple-menu"
-                aria-haspopup="true"
-                onClick={handleClick}
-              >
-                {selectedOption || 'Plans & Pricing'}&nbsp;<img src={Polygon} alt="Dropdown Icon" />
-              </Button>
-              <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>Option 1</MenuItem>
-                <MenuItem onClick={handleClose}>Option 2</MenuItem>
-                <MenuItem onClick={handleClose}>Option 3</MenuItem>
-              </Menu>
-            </Toolbar>
-      <div className={classes.div1}>
-      <div className={classes.divition}>
-          <Typography className={classes.heading1}  variant="h4" gutterBottom>
-          Welcome to the m. eet app 🍑
-          </Typography>
-</div><div className={classes.divition1}>
-      <Typography className={classes.text1}  variant="h6" gutterBottom>
-      Login with email 
-          </Typography>
-          </div>
-          <form className={classes.form} >
-      <TextField
-        className={classes.input}
-        variant="outlined"
-        label="Create a Password"
-        InputLabelProps={{
-          
-        }}
-    
-      /><br></br>
-        <TextField
-        className={classes.input}
-        variant="outlined"
-        label="Confirm Password"
-        InputLabelProps={{
-         
-        }}
-    
-      />
-     
-      <Button
-      className={classes.button}
-        variant="contained"
-        type="submit"
-      >
-       Create Account <img src={icon1} className={classes.icon1} alt="Example 1" />
-      </Button>
-      <Typography variant="body1" className={classes.type1} gutterBottom >
-      Don’t have an account?  <span style={{ color: '#FB451A' }}>Signup</span><br></br><br></br>
-      </Typography><br></br>
-      <Typography className={classes.text1}  variant="h6" gutterBottom>
-      Or
-      </Typography>
-      <div style={{ display: 'flex' }}>
-      <img src={Group1} alt="Example 1"  />
-      <img src={Group2} alt="Example 2"className={classes.gap1} />
-      <img src={Group3} alt="Example 2" className={classes.gap1}/>
-      <img src={Group4} alt="Example 2"className={classes.gap1} />
-      </div><br></br>
-      <div className={classes.divition}>
-      <Typography variant="body1" className={classes.type1} gutterBottom >
-      m. eet 2023 &nbsp; <span style={{ color: '#3333FF' }}> Terms of Service &nbsp; &nbsp; Privacy Policy&nbsp; &nbsp;&nbsp; &nbsp;   Community Guidelines</span><br></br><br></br>
-      </Typography>
-      </div>
-    </form>
-    </div>
-        
-        </Grid>
-        <Grid item xs={6} className={classes.grid2}>
-          <img src={image2} alt="Your Image" className={classes.image} />
-        </Grid>
-      </Grid>
-      </div>
+return (
+<div>
+<Grid container spacing={0} >
+<Grid item xs={6}  >
+<Toolbar>
+<Typography variant="h6" className={classes.logo}>
+ m. eet
+</Typography>
+<Typography variant="h6" className={classes.nav1}>
+ About
+</Typography>
+<Button
+className={classes.dropdown1}
+aria-controls="simple-menu"
+aria-haspopup="true"
+onClick={handleClick}
+>
+{selectedOption || 'Plans & Pricing'}&nbsp;<img src={Polygon} alt="Dropdown Icon" />
+</Button>
+<Menu
+ id="simple-menu"
+anchorEl={anchorEl}
+keepMounted
+open={Boolean(anchorEl)}
+onClose={handleClose}
+>
+<MenuItem onClick={handleClose}>Option 1</MenuItem>
+<MenuItem onClick={handleClose}>Option 2</MenuItem>
+<MenuItem onClick={handleClose}>Option 3</MenuItem>
+</Menu>
+</Toolbar>
+<div className={classes.div1}>
+
+<Typography className={classes.heading}  variant="h4" gutterBottom  style={{ fontWeight: '400', }}>
+Welcome to the m. eet app 🍑
+</Typography>
+<Typography className={classes.text}  variant="h6" gutterBottom style={{ marginTop: '80px', }}>
+Login with email 
+</Typography>
+<form className={classes.form} >
+<TextField
+className={classes.input}
+ variant="outlined"
+label="Create a Password"
+/><br></br>
+<TextField
+className={classes.input}
+variant="outlined"
+label="Confirm Password"
+ />
+<Button
+className={classes.button}
+variant="contained"
+type="submit"
+style={{ marginTop:'20px',width:'400px',height:'40px', }}
+>Create Account <img src={icon1} className={classes.icon1} alt="Example 1" />
+</Button>
+<Typography variant="body1" className={classes.text2} gutterBottom >
+Don’t have an account?  <span style={{ color: '#FB451A'}}>Signup</span>
+</Typography>
+<Typography className={classes.text}  variant="h6" gutterBottom style={{ marginTop:'20px', }}>
+Or
+</Typography>
+<div style={{ display: 'flex',marginTop:'20px', }}>
+<img src={Group1} alt="Example 1"  />
+<img src={Group2} alt="Example 2"className={classes.gap1} />
+<img src={Group3} alt="Example 2" className={classes.gap1}/>
+<img src={Group4} alt="Example 2"className={classes.gap1} />
+</div><br></br>
+<Typography variant="body1" className={classes.text2} gutterBottom >
+m. eet 2023 &nbsp; <span style={{ color: '#3333FF' }}> Terms of Service &nbsp; &nbsp; Privacy Policy&nbsp; &nbsp;&nbsp; &nbsp;   Community Guidelines</span><br></br><br></br>
+</Typography>
+</form>
+</div>
+</Grid>
+<Grid item xs={6} className={classes.grid2}>
+<img src={image2} alt="Your Image" className={classes.image} />
+</Grid>
+</Grid>
+</div>
   );
 };
 

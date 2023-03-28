@@ -1,17 +1,12 @@
 import React, { useState }  from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Toolbar, MenuItem, Menu } from '@material-ui/core';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import image2 from './images/mea1.png';
-
 import healthicon from './images/healthicons_coins.svg';
 import Video from './images/Video.svg';
 import Home from './images/Home.svg';
@@ -20,143 +15,11 @@ import Setting from './images/Setting.svg';
 import Ellipse10 from './images/Ellipse 10.svg';
 import Notification from './images/Notification.svg';
 import Grid from '@material-ui/core/Grid';
-import { Menu as MenuIcon, Language as LanguageIcon } from '@material-ui/icons';
-
-import { TextField, InputAdornment, Button } from "@material-ui/core";
-import { Visibility, VisibilityOff } from "@material-ui/icons";
-import icon1 from './images/icon1.svg';
-import Polygon from './images/Polygon1.svg';
+import { Button } from "@material-ui/core";
+import { useStyles } from "./styles";
 
 
-import Group1 from './images/Group1.png';
-import Group2 from './images/Group2.png';
-import Group3 from './images/Group3.png';
-import Group4 from './images/Group4.png';
-import { height } from '@mui/system';
-const drawerWidth = 110;
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-    "&  .MuiDrawer-paperAnchorDockedLeft":
-  {
-    borderRight: '1px solid #F5F8FE',
-    backgroundColor:'#F5F8FE',
-},
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-
-  toolbar: theme.mixins.toolbar,
-  content: {
-   
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-  card: {
-    display: 'flex',
-  },
-  logo: {
-  
-    fontFamily: 'Iowan Old Style' ,
-     fontStyle: 'normal',
-     fontWeight: '700',
-     fontSize: '24px',
-     lineHeight: '32px',
-    color: '#000000',
-      },
-  image:{
-    marginTop:'25px',
-    marginLeft:'100px',
-width:'60%',
-height:'90%',
-  },
-  cardContent: {
-    flex: '1 0 auto',
-  },
-  cardMedia: {
-    width: 100,
-  },
-  cardMediaWrapper: {
-    position: 'relative',
-    width: 200,
-    '&:hover': {
-      backgroundColor: theme.palette.primary.main,
-      opacity: 0.8,
-    },
-  },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        '*': {
-          boxSizing: 'content-box',
-        },
-      },
-    },
-  },
-  icon: {
-    backgroundColor: 'transparent',
-    marginTop:'30px',
-    '&:hover': {
-      backgroundColor: 'orange',
-      color:'orange',
-    },
-  },
-  list:{
-marginLeft:'18px',
-marginTop:'30px',
-  },
-  button:{
-    width:'400px',
-    height:'40px',
-    color:'#FFFFFF',
-    marginTop:'20px',
-    fontFamily: 'Poppins',
-  fontStyle: 'normal',
-  fontWeight: '500',
-  fontSize: '12px',
-  lineHeight: '18px',
-  textTransform: 'none',
-  backgroundColor:'#FB451A',
-  borderRadius:' 8px',
-  "&  .MuiButton-label":
-    {
-   width:'100%',
-  },
-  '&:hover': {
-    backgroundColor: '#FB451A', // specify the hover color
-  },
-   },
-   heading2:{
-    fontFamily: 'Iowan Old Style',
-    width:'368px',
-    fontStyle: 'normal',
-    fontWeight: '400',
-    fontSize: '16px',
-    lineHeight: '22px',
-    color:'#000000',
-    marginBottom:'30px',
-    },
-    heading1:{
-        fontFamily: 'Iowan Old Style',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        fontSize: '36px',
-        lineHeight: '49px',
-        color: '#000000',
-         },
-         div1: {
-            marginLeft: '50px',
-            marginTop: '150px',
-           },
-
-       
-}));
 
 
 const SideNavbar = () => {
@@ -214,13 +77,13 @@ const SideNavbar = () => {
         </List>
       </Drawer>
     
-      <Card style={{ display: 'flex' ,backgroundColor:'#F5F8FE',marginTop:'35px',width:'85%',height:'530px', marginLeft: '40px', border:'1px solid transparent', borderRadius:'12px',}}>
+      <Card className={classes.card2}>
         <Grid item xs={6} >
-        <div className={classes.div1}>
-          <Typography className={classes.heading1}  variant="h4" gutterBottom>
+        <div className={classes.break2}>
+          <Typography className={classes.heading}  variant="h4" gutterBottom>
           Find yourself a m. eet
           </Typography>
-     <Typography className={classes.heading2}  variant="h6" gutterBottom>
+     <Typography className={classes.heading2}  variant="h6" gutterBottom style={{ width:'368px', marginBottom:'30px', }}>
      Lorem Ipsum is simply dummy text of the printing and 
 typesetting industry.
           </Typography>
@@ -228,6 +91,7 @@ typesetting industry.
       className={classes.button}
         variant="contained"
         type="submit"
+        style={{ marginTop:'20px', }}
       >
        Get Started 
       </Button>
@@ -235,7 +99,7 @@ typesetting industry.
  
         </Grid>
         <Grid item xs={6}  className={classes.grid2}>
-          <img src={image2} alt="Your Image" className={classes.image} />
+          <img src={image2} alt="Your Image" className={classes.image1} />
         </Grid>
         </Card>
     </div>

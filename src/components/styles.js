@@ -1,8 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { createTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from '@material-ui/core';
-import { FaGoogle, FaApple } from "react-icons/fa";
-
+const drawerWidth = 110;
 export const useStyles = makeStyles((theme) => ({
   
   appBar: {
@@ -13,242 +10,190 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
    
   },
+  toolbar: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
   root: {
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-  image: {
-    width: '72%',
-    marginTop:'35px',
-    marginLeft:'100px',
-    height: 'auto',
-  },
-  grid2:{
-    backgroundColor:'#F5F8FE',
-    height:'auto'
-  },
-  divition:{
-    marginTop:'50px',
-  },
-  divition1:{
-    marginTop:'30px',
-  },
-  logo: {
-marginLeft:'80px',
-fontFamily: 'Iowan Old Style' ,
- fontStyle: 'normal',
- fontWeight: '700',
- fontSize: '32px',
- lineHeight: '44px',
-color: '#000000',
-  },
-  nav1: {
-    marginLeft:'180px',
-    fontFamily: 'Iowan Old Style' ,
-     fontStyle: 'normal',
-     fontWeight: '700',
-     fontSize: '14px',
-     lineHeight: '24px',
-    color: '#333333',
-      },
- grid1: {
-  backgroundColor: '#041533',
- },
-
- head1: {
-  marginTop: '50px',
-  marginLeft: '20px',
-  fontFamily: 'sans-serif' ,
- fontStyle: 'normal',
- fontWeight: '600',
- fontSize: '34px',
- lineHeight: '40px',
- },
- head2: {
-  marginTop: '20px',
-  marginLeft: '20px',
-  fontFamily: 'Roboto' ,
- fontStyle: 'normal',
- fontSize: '16px',
- lineHeight: '25px',
- width: '300px',
- },
- div1: {
-  marginLeft: '100px',
-  marginTop: '10px',
- },
- div2: {
-  marginLeft: '180px',
-  marginTop: '30px',
- },
- div3:{
-  marginTop: '100px',
- },
- heading1:{
-fontFamily: 'Iowan Old Style',
-fontStyle: 'normal',
-fontWeight: '400',
-fontSize: '36px',
-lineHeight: '49px',
-color: '#000000',
- },
-heading2:{
-fontFamily: 'Iowan Old Style',
-width:'368px',
-fontStyle: 'normal',
-fontWeight: '400',
-fontSize: '16px',
-lineHeight: '22px',
-color:'#000000',
-marginBottom:'30px',
-},
-text1:{
-fontFamily: 'Iowan Old Style',
-width:'368px',
-fontStyle: 'normal',
-fontWeight: '400',
-fontSize: '12px',
-lineHeight: '16px',
-color:'#000000',
-},
- button1:{
-fontFamily: 'sans-serif',
-fontStyle: 'normal',
-fontWeight: '500',
-fontSize: '12px',
-lineHeight: '18px',
-color:'#A1A1A1',
-  backgroundColor: 'white',
-  marginLeft:'10px',
-  marginTop:'20px',
-  textTransform: 'none',
-  boxSizing: 'border-box',
-  border: '1px solid #E8E8E8',
-borderRadius:'6px',
-boxShadow: 'none',
-  '& img': {
-    width: '20px', // specify the width of the image
-  },
-  '&:hover': {
-    backgroundColor: 'white', // specify the hover color
-    boxShadow: 'none',
-  },
-
-  
- },
- button2:{
-  fontFamily: 'sans-serif',
-fontStyle: 'normal',
-fontWeight: '500',
-fontSize: '12px',
-lineHeight: '18px',
-color:'#A1A1A1',
-  backgroundColor: 'white',
-  marginTop:'20px',
-  textTransform: 'none',
-  boxSizing: 'border-box',
-  border: '1px solid #E8E8E8',
-borderRadius:'6px',
-boxShadow: 'none',
-  '& img': {
-    width: '20px', // specify the width of the image
-  },
-  '&:hover': {
-    backgroundColor: 'white', // specify the hover color
-    boxShadow: 'none',
-  },
-
-  
- },
- gap1:{
-marginLeft:'50px',
- },
- text:{
-  fontFamily: 'sans-serif',
-fontStyle: 'normal',
-fontWeight: '500',
-fontSize: '14px',
-lineHeight: '21px',
-color:'#A1A1A1',
-marginLeft:'200px',
-marginTop: '20px',
-
- },
- form:{
-  marginTop:'-10px',
- },
- button:{
-  width:'400px',
-  height:'40px',
-  color:'#FFFFFF',
-  marginTop:'20px',
-  fontFamily: 'Poppins',
-fontStyle: 'normal',
-fontWeight: '500',
-fontSize: '12px',
-lineHeight: '18px',
-textTransform: 'none',
-backgroundColor:'#FB451A',
-borderRadius:' 8px',
-"&  .MuiButton-label":
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+    "&  .MuiDrawer-paperAnchorDockedLeft":
   {
- width:'100%',
+    borderRight: '1px solid #F5F8FE',
+    backgroundColor:'#F5F8FE',
 },
-'&:hover': {
-  backgroundColor: '#FB451A', // specify the hover color
-},
- },
-icon1:{
-  marginLeft:'5px',
-},
- input:{
-  width:'400px' ,
-  marginTop:'10px',
-  border: 'none',
-  backgroundColor:'#F5F8FE',
-  '&:hover': {
-    border: 'red', // specify the hover color
   },
-  "& .MuiFormLabel-root": {
+  drawerPaper: {
+    width: drawerWidth,
+  },
+
+ cardContent: {
+   flex: '1 0 auto',
+ },
+ cardMedia: {
+   width: 100,
+ },
+ cardMediaWrapper: {
+   position: 'relative',
+   width: 200,
+   '&:hover': {
+     backgroundColor: theme.palette.primary.main,
+     opacity: 0.8,
+   },
+ },
+ components: {
+   MuiCssBaseline: {
+     styleOverrides: {
+       '*': {
+         boxSizing: 'content-box',
+       },
+     },
+   },
+ },
+ 
+
+ // specify the Global CSS
+
+
+// specify the button
+button:{
+  width:'400px',height:'40px',
+  color:'#FFFFFF',
+  fontFamily: 'Poppins',
+  fontStyle: 'normal',
+  fontWeight: '500',
+  fontSize: '14px',
+  lineHeight: '18px',
+  textTransform: 'none',
+  backgroundColor:'#FB451A',
+  borderRadius:' 8px',
+  '&:hover': {
+  backgroundColor: '#FB451A', 
+  },
+   },
+   // specify the logo
+  logo : {
+  marginLeft:'80px',
+  fontFamily: 'Iowan Old Style' ,
+  fontStyle: 'normal',
+  fontWeight: '700',
+  fontSize: '32px',
+  lineHeight: '44px',
+  color: '#000000',
+   },
+  
+  // specify the heading
+  heading:{
+  fontFamily: 'Iowan Old Style',
+  fontStyle: 'normal',
+  fontSize: '36px',
+  lineHeight: '49px',
+  color: '#000000',
+  },
+  // specify the heading2
+  heading2:{
+  fontFamily: 'Iowan Old Style',
+  fontStyle: 'normal',
+  fontWeight: '400',
+  fontSize: '16px',
+  lineHeight: '22px',
+  color:'#000000',
+  
+  },
+   // specify the input
+  input:{
+    width:'400px' ,
+    marginTop:'10px',
+    border: 'none',
+    backgroundColor:'#F5F8FE',
+    '&:hover': {
+    border: 'red',
+     },
+    "& .MuiFormLabel-root": {
     fontFamily: 'sans-serif',
     marginTop:'-7px',
     fontStyle: 'normal',
     fontWeight: '500',
     fontSize: '14px',
-    lineHeight: '21px',
-    color:'#A1A1A1',
-    },
-   
-  "& .MuiOutlinedInput-root ": {
+     lineHeight: '21px',
+     color:'#A1A1A1',
+     },
+    "& .MuiOutlinedInput-root ": {
     border: '1px solid #E3EDFF',
     bordeRadius: '8px',
+      },
     '&:hover': {
-      border: 'red', // specify the hover color
-    },
-},
-'&:hover': {
-  color:'#A1A1A1',
-  backgroundColor:'white',
-},
-"& .MuiInputBase-input": {
-  height: '0.4876em',
-},
-
-
+        color:'#A1A1A1',
+        backgroundColor:'white',
+      },
+      "& .MuiInputBase-input": {
+        height: '0.4876em',
+      },
+      },
+// Specify the grid color
+grid2:{
+ backgroundColor:'#F5F8FE',
+height:'auto'
  },
- card2: {
-  height: '600px',
-  borderRadius: '0px 30px 30px 0px',
- },
- img1:{
- marginLeft:'50px',
-  marginTop:'50px',
+
+// Others Css
+
+gap1:{
+marginLeft:'50px',
 },
-logo1:{
-  marginLeft:'10px',
-  marginTop:'10px',
+icon1:{
+marginLeft:'5px',
 },
-type1:{
+nav1: {
+marginLeft:'180px',
+fontFamily: 'Iowan Old Style' ,
+fontStyle: 'normal',
+fontWeight: '700',
+fontSize: '14px',
+lineHeight: '24px',
+color: '#333333',
+},
+div1: {
+marginLeft: '100px',
+marginTop: '50px',
+},
+image: {
+width: '72%',
+marginTop:'35px',
+marginLeft:'100px',
+height: 'auto',
+},
+image1:{
+  marginTop:'25px',
+  marginLeft:'100px',
+  width:'60%',
+  height:'90%',
+   },
+text:{
+fontFamily: 'Iowan Old Style',
+width:'368px',
+fontStyle: 'normal',
+fontWeight: '400',
+fontSize: '12px',
+lineHeight: '16.38px',
+color:'#000000',
+},
+dropdown1:{
+marginLeft:'40px',
+textTransform: 'none',
+fontFamily: 'Iowan Old Style',
+fontStyle: 'normal',
+fontWeight: '700',
+fontSize: '14px',
+lineHeight: '24px',
+color:'#333333',
+},
+text2:{
 marginTop:'10px',
 fontStyle: 'normal',
 fontWeight: '400',
@@ -256,25 +201,23 @@ fontSize: '12px',
 lineHeight: '18px',
 color:'#A1A1A1',
 },
-type2:{
-marginTop:'20px',
-marginLeft:'300px',
-fontStyle: 'normal',
-fontWeight: '400',
-fontSize: '12px',
-lineHeight: '18px',
-color:'#A1A1A1',
+list:{
+marginLeft:'18px',
+marginTop:'30px',
 },
-dropdown1:{
-marginLeft:'40px',
-marginTop:'0px',
-textTransform: 'none',
-fontFamily: 'sans-serif',
-fontStyle: 'normal',
-fontWeight: '400',
-fontSize: '12px',
-lineHeight: '18px',
-color:'#333333',
-}
+break2: {
+marginLeft: '50px',
+marginTop: '150px',
+},
+card2:{
+display: 'flex' ,
+backgroundColor:'#F5F8FE',
+marginTop:'10px',
+width:'88%',
+height:'530px', 
+marginLeft: '130px',
+border:'1px solid transparent', 
+borderRadius:'12px',
+},
 }));
 
